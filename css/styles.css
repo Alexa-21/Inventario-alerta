@@ -1,0 +1,164 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #2D57A8;
+    color: #FFFEFE;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Estilos para la lista de productos */
+#product-list {
+    flex-basis: 70%; /* Ocupa el 70% del ancho */
+    padding: 10px;
+    display: flex;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Estilos para detalles del producto */
+#product-details {
+    flex-basis: 25%; /* Ocupa el 25% del ancho */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Estilos para el carrito */
+#cart {
+    flex-basis: calc(5% - 20px); /* Ocupa el 5% del ancho, con un margen entre elementos */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* Estilos para botones y elementos de formulario */
+.botones{
+    display: flex;
+}
+.btn {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: #6D93C9;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button:hover {
+    color: black;
+}
+
+button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: white; /* Color del texto del enlace */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s; /* Animación de cambio de color en hover */
+
+    /* Otras propiedades de estilo que desees agregar, como márgenes o fondos */
+}
+
+a:hover {
+    color: black; /* Cambia el color del texto al pasar el mouse sobre el enlace */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de exportar */
+#export-csv {
+    margin: 10px;
+    background-color: #B5DDCA;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#export-csv:hover {
+    background-color: #33A892;
+}
+
+/* Estilos generales para todo el contenido */
+h1, h2 {
+    text-align: center;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #product-details, #cart {
+        flex-basis: 100%; /* Ocupa el 100% del ancho en dispositivos móviles */
+    }
+
+    #export-csv {
+        margin: 10px;
+    }
+}

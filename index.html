@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Inventario de Farmacia</title>
+  </head>
+  <body>
+    <header>
+      <h1>Inventario de Farmacia</h1>
+      <div id="search-category">
+        <input type="text" id="search" placeholder="Buscar por nombre" />
+        <select id="category">
+          <option value="">Todas las categorías</option>
+          <option value="medicamento">Medicamentos</option>
+          <option value="vendible">Vendibles</option>
+        </select>
+      </div>
+    </header>
+    <main>
+      <section id="product-list">
+        <!-- La lista de productos se generará aquí -->
+      </section>
+      <section id="product-details">
+        <h2>Detalles del Producto</h2>
+        <p id="product-name">Nombre:</p>
+        <p id="product-category">Categoría:</p>
+        <p id="product-description">Descripción:</p>
+        <p id="product-price">Precio:</p>
+        <p id="product-stock">Stock:</p>
+        <p id="product-expiry">Fecha de Vencimiento:</p>
+        <button class="btn" id="add-to-cart">Agregar al Carrito</button>
+      </section>
+    </main>
+    <aside id="cart">
+      <h2>Carrito de Compras</h2>
+      <ul id="cart-items">
+        <!-- Los productos seleccionados se mostrarán aquí -->
+      </ul>
+      <div class="botones">
+        <button class="btn" id="buy-button">Comprar</button>
+        <button class="btn" id="clear-cart-button">Limpiar Carrito</button>
+      </div>
+    </aside>
+    <button id="export-csv">Exportar a CSV</button>
+    <button class="btn"><a href="./alertas.html">Alertas</a></button>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
